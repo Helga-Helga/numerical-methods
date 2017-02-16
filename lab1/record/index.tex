@@ -1,0 +1,61 @@
+\input{../common/head_ru.tex}
+\input{config.tex}
+
+\begin{document}
+
+\import{1_title/}{title.tex}
+
+\clearpage
+
+\pagenumbering{gobble}
+%\import{3_abstract/}{main.tex}
+
+%\pagestyle{empty}
+%\thispagestyle{empty}
+%\tableofcontents
+
+\clearpage
+\pagenumbering{arabic}
+\pagestyle{fancy}
+\setcounter{page}{2}
+
+\clearpage
+
+\chapter{Исходные данные}
+
+В компьютерном практикуме (вариант 8) находятся корни уравнения
+\begin{equation} \label{eq:1}
+2x^5 + 3x^2 - 2x - 6 = 0.
+\end{equation}
+
+\chapter{Допрограммный этап}
+
+Корни уравнения были найдены с помощью \href{http://www.wolframalpha.com}{WolframAlpha}, построен график (рис. \ref{fig:plot}).
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=.3\textwidth]{plot.png}
+  \caption{График полинома $f \left( x \right) = 2x^5 + 3x^2 - 2x - 6$}
+\label{fig:plot}
+\end{figure}
+
+Красной точкой на графике отмечен корень уравнения \ref{eq:1}.
+Он лежит на промежутке от $1$ до $1.5$.
+
+\chapter{Листинг программы}
+Листинг программы уточнения корней по методу бисекции
+\lstset{inputencoding=utf8, extendedchars=\true}
+\lstinputlisting[language=python,
+                 basicstyle=\ttfamily\scriptsize]{../code/bisection.py}
+
+\chapter{Результаты работы программы}
+
+Результаты метода бисекции
+\lstset{inputencoding=utf8, extendedchars=\true}
+\lstinputlisting[language=bash,
+                 basicstyle=\ttfamily\scriptsize]{../code/bisection_result.txt}
+
+\chapter*{Выводы}
+\addcontentsline{toc}{chapter}{Выводы}
+
+\end{document}
