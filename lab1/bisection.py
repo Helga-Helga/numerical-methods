@@ -22,4 +22,4 @@ def bisection(a, b, accuracy):
         iteration += 1
     return c
 
-print 'Root: {}'.format(bisection(a, b, accuracy))
+bisection(a, b, accuracy)
