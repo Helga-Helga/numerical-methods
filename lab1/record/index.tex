@@ -23,7 +23,7 @@
 
 \chapter{Исходные данные}
 
-В компьютерном практикуме (вариант 8) находятся корни уравнения
+В компьютерном практикуме (вариант 8) ищутся корни уравнения
 \begin{equation} \label{eq:1}
 2x^5 + 3x^2 - 2x - 6 = 0.
 \end{equation}
@@ -53,6 +53,11 @@
 \lstinputlisting[language=python,
                  basicstyle=\ttfamily\scriptsize]{../code/horde.py}
 
+Листинг программы уточнения корней по методу Ньютона (касательных)
+\lstset{inputencoding=utf8, extendedchars=\true}
+\lstinputlisting[language=python,
+                 basicstyle=\ttfamily\scriptsize]{../code/newton.py}
+
 \chapter{Результаты работы программы}
 
 Результаты метода бисекции
@@ -64,6 +69,11 @@
 \lstset{inputencoding=utf8, extendedchars=\true}
 \lstinputlisting[language=bash,
                  basicstyle=\ttfamily\scriptsize]{../code/horde_result.txt}
+
+Результаты метода Ньютона (касательных)
+\lstset{inputencoding=utf8, extendedchars=\true}
+\lstinputlisting[language=bash,
+                 basicstyle=\ttfamily\scriptsize]{../code/newton_result.txt}
 
 \chapter*{Выводы}
 \addcontentsline{toc}{chapter}{Выводы}
