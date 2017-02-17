@@ -11,7 +11,7 @@ def horde(a, b, accuracy):
             b = c
         elif f(b) * f(c) < 0:
             a = c
-        c = (a + b) / 2
+        c = (a * f(b) - b * f(a)) / (f(b) - f(a))
         iteration += 1
     return c
 

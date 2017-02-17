@@ -2,53 +2,38 @@ Iteration # 1
 Approximate value 1.09411764706
 Error: 1.461142352
 Iteration # 2
-Approximate value 1.29705882353
-Error: 3.79520343167
+Approximate value 1.13530568974
+Error: 0.631659938106
 Iteration # 3
-Approximate value 1.19558823529
-Error: 0.782945057463
+Approximate value 1.15228262763
+Error: 0.258503016609
 Iteration # 4
-Approximate value 1.14485294118
-Error: 0.424146888749
+Approximate value 1.15909423487
+Error: 0.103381367024
 Iteration # 5
-Approximate value 1.17022058824
-Error: 0.156838704004
+Approximate value 1.16179675957
+Error: 0.0409612978165
 Iteration # 6
-Approximate value 1.15753676471
-Error: 0.139127423225
+Approximate value 1.1628641622
+Error: 0.0161694549738
 Iteration # 7
-Approximate value 1.16387867647
-Error: 0.00746674517207
+Approximate value 1.16328499297
+Error: 0.00637353689004
 Iteration # 8
-Approximate value 1.16070772059
-Error: 0.0661749749345
+Approximate value 1.16345079075
+Error: 0.00251081402306
 Iteration # 9
-Approximate value 1.16229319853
-Error: 0.029440596243
+Approximate value 1.16351609305
+Error: 0.000988893788602
 Iteration # 10
-Approximate value 1.1630859375
-Error: 0.0110085862703
+Approximate value 1.16354181065
+Error: 0.000389444685057
 Iteration # 11
-Approximate value 1.16348230699
-Error: 0.00177634078818
+Approximate value 1.16355193841
+Error: 0.000153365108101
 Iteration # 12
-Approximate value 1.16368049173
-Error: 0.00284384649989
+Approximate value 1.16355592672
+Error: 6.03950443683e-05
 Iteration # 13
-Approximate value 1.16358139936
-Error: 0.00053341401189
-Iteration # 14
-Approximate value 1.16353185317
-Error: 0.000621548089255
-Iteration # 15
-Approximate value 1.16355662626
-Error: 4.40882151951e-05
-Iteration # 16
-Approximate value 1.16356901281
-Error: 0.000244657604066
-Iteration # 17
-Approximate value 1.16356281954
-Error: 0.000100283370882
-Iteration # 18
-Approximate value 1.1635597229
-Error: 2.80972469593e-05
+Approximate value 1.16355749731
+Error: 2.37833848757e-05
