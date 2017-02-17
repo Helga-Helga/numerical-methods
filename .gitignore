@@ -1,3 +1,8 @@
+*.doc#
+*.tex~
+*.tex.latex
+*.pyc
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
