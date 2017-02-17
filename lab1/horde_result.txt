@@ -1,0 +1,54 @@
+Iteration # 1
+Approximate value 1.09411764706
+Error: 1.461142352
+Iteration # 2
+Approximate value 1.29705882353
+Error: 3.79520343167
+Iteration # 3
+Approximate value 1.19558823529
+Error: 0.782945057463
+Iteration # 4
+Approximate value 1.14485294118
+Error: 0.424146888749
+Iteration # 5
+Approximate value 1.17022058824
+Error: 0.156838704004
+Iteration # 6
+Approximate value 1.15753676471
+Error: 0.139127423225
+Iteration # 7
+Approximate value 1.16387867647
+Error: 0.00746674517207
+Iteration # 8
+Approximate value 1.16070772059
+Error: 0.0661749749345
+Iteration # 9
+Approximate value 1.16229319853
+Error: 0.029440596243
+Iteration # 10
+Approximate value 1.1630859375
+Error: 0.0110085862703
+Iteration # 11
+Approximate value 1.16348230699
+Error: 0.00177634078818
+Iteration # 12
+Approximate value 1.16368049173
+Error: 0.00284384649989
+Iteration # 13
+Approximate value 1.16358139936
+Error: 0.00053341401189
+Iteration # 14
+Approximate value 1.16353185317
+Error: 0.000621548089255
+Iteration # 15
+Approximate value 1.16355662626
+Error: 4.40882151951e-05
+Iteration # 16
+Approximate value 1.16356901281
+Error: 0.000244657604066
+Iteration # 17
+Approximate value 1.16356281954
+Error: 0.000100283370882
+Iteration # 18
+Approximate value 1.1635597229
+Error: 2.80972469593e-05
