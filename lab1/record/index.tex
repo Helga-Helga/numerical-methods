@@ -71,10 +71,16 @@
 \lstinputlisting[language=bash,
                  basicstyle=\ttfamily\scriptsize]{../code/bisection_result.txt}
 
-Результаты метода хорд
+Результаты метода хорд с критерием завершения процесса $ \left| f \left( c \right) \right| < \varepsilon $
 \lstset{inputencoding=utf8, extendedchars=\true}
 \lstinputlisting[language=bash,
                  basicstyle=\ttfamily\scriptsize]{../code/horde_result.txt}
+
+Результаты метода хорд с критерием завершения процесса
+$$\left| c - c_{previous} \right| < \varepsilon $$
+\lstset{inputencoding=utf8, extendedchars=\true}
+\lstinputlisting[language=bash,
+                 basicstyle=\ttfamily\scriptsize]{../code/horde_result_difference.txt}
 
 Результаты метода Ньютона (касательных)
 \lstset{inputencoding=utf8, extendedchars=\true}
