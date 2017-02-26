@@ -1,39 +1,15 @@
 Iteration # 1
-Approximate value 1.09411764706
-Error: 1.461142352
+Approximate value 1.04398663697
+Error: 2.33794623207
 Iteration # 2
-Approximate value 1.13530568974
-Error: 0.631659938106
+Approximate value 1.15675248338
+Error: 0.157065227139
 Iteration # 3
-Approximate value 1.15228262763
-Error: 0.258503016609
+Approximate value 1.16319895517
+Error: 0.00837728079985
 Iteration # 4
-Approximate value 1.15909423487
-Error: 0.103381367024
+Approximate value 1.16353960357
+Error: 0.000440891179815
 Iteration # 5
-Approximate value 1.16179675957
-Error: 0.0409612978165
-Iteration # 6
-Approximate value 1.1628641622
-Error: 0.0161694549738
-Iteration # 7
-Approximate value 1.16328499297
-Error: 0.00637353689004
-Iteration # 8
-Approximate value 1.16345079075
-Error: 0.00251081402306
-Iteration # 9
-Approximate value 1.16351609305
-Error: 0.000988893788602
-Iteration # 10
-Approximate value 1.16354181065
-Error: 0.000389444685057
-Iteration # 11
-Approximate value 1.16355193841
-Error: 0.000153365108101
-Iteration # 12
-Approximate value 1.16355592672
-Error: 6.03950443683e-05
-Iteration # 13
-Approximate value 1.16355749731
-Error: 2.37833848757e-05
+Approximate value 1.16355752287
+Error: 2.31874705268e-05

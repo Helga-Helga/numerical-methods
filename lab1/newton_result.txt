@@ -1,12 +1,9 @@
 Iteration # 1
-Approximate value 1.5
-Error: 12.9375
+Approximate value 1.2
+Error: 0.89664
 Iteration # 2
-Approximate value 1.27548806941
-Error: 3.08131561768
+Approximate value 1.16542874769
+Error: 0.043717708526
 Iteration # 3
-Approximate value 1.17955664636
-Error: 0.381874681655
-Iteration # 4
-Approximate value 1.1639290992
-Error: 0.0086433492071
+Approximate value 1.16356368171
+Error: 0.000120381699087
