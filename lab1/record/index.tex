@@ -82,10 +82,15 @@ $$\left| c - c_{previous} \right| < \varepsilon $$
 \lstinputlisting[language=bash,
                  basicstyle=\ttfamily\scriptsize]{../code/horde_result_difference.txt}
 
-Результаты метода Ньютона (касательных)
+Результаты метода Ньютона (касательных) с критерием завершения процесса $ \left| f \left( x_0 \right) \right| < \varepsilon $
 \lstset{inputencoding=utf8, extendedchars=\true}
 \lstinputlisting[language=bash,
                  basicstyle=\ttfamily\scriptsize]{../code/newton_result.txt}
+
+Результаты метода Ньютона (касательных) с критерием завершения процесса $ \left| x_{0_{previous}} - x_0 \right| < \varepsilon $
+\lstset{inputencoding=utf8, extendedchars=\true}
+\lstinputlisting[language=bash,
+                 basicstyle=\ttfamily\scriptsize]{../code/newton_result_difference.txt}
 
 \chapter*{Выводы}
 \addcontentsline{toc}{chapter}{Выводы}
