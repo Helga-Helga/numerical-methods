@@ -187,24 +187,51 @@ F \left( 1.2 \right) =
 Получили $ \frac{2}{3} < x^{+} < 1.2$.
 
 Воспользуемся методом Штурма определения количества корней на заданном промежутке.
-Построим систему полиномов Штурма.
+Построим систему полиномов Штурма по правилу
+$$P_0 = P \left( x \right), \,
+P_1 = P' \left( x \right), \,
+P_i = - P_{i - 1} \, mod \, P_i, \,
+i = 1, \dotsc, n - 1.$$
 
 \lstset{inputencoding=utf8, extendedchars=\true}
 \lstinputlisting[language=bash,
                  basicstyle=\ttfamily\scriptsize]{../code/storm_polynomials.txt}
 
-Корни уравнения были найдены с помощью \href{http://www.wolframalpha.com}{WolframAlpha}, построен график (рис. \ref{fig:plot}).
+Построим графики полиномов Штурма с помощью \href{http://www.wolframalpha.com}{WolframAlpha} (рис. \ref{fig:storm}).
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=.3\textwidth]{plot.png}
-  \caption{График полинома $f \left( x \right) = 2x^5 + 3x^2 - 2x - 6$}
-\label{fig:plot}
+  \includegraphics[width=.6\textwidth]{plot.png}
+  \caption{Графики полиномов Штурма}
+\label{fig:storm}
 \end{figure}
 
-Красной точкой на графике отмечен корень уравнения \ref{eq:1}.
-По теоремам нашли, что он лежит на промежутке
-$$ \left[ a, b \right] = \left[ \frac{2}{3}, 1.2 \right].$$
+На рисунке \ref{fig:storm} свеху вниз слева направо отображены графики полиномов Штурма (от $P_0$ до $P_4$).
+Красными точками на графиках отмечены действительные корни уравнений $P_i \left( x \right) = 0, \, i = 0, \dotsc 4$.
+
+Корни каждого следующего полинома размещаются между корнями предыдущего полинома и образуют перевёрнутый треугольник (с основанием сверху).
+
+Найдём количество смен знаков полиномов в крайних точках найденных интервалов
+
+\begin{center}
+  \begin{tabular}{ | c | c | c | c | c |}
+    \hline
+    & $-2$ & $-0.58$ & $ \frac{2}{3}$ & $1.2$ \\ \hline
+    $P_0$ & + & + & + & - \\ \hline
+    $P_1$ & + & - & - & - \\ \hline
+    $P_2$ & - & - & - & - \\ \hline
+    $P_3$ & - & + & + & + \\ \hline
+    $P_4$ & + & + & + & + \\ \hline
+    Количество смен знаков & 2 & 2 & 2 & 1 \\
+    \hline
+  \end{tabular}
+\end{center}
+
+Получили, что количество действительных корней на отрезке
+$$ \left[ -2, -0.58 \right] $$
+равно $2 - 2 = 0$, а на отрезке
+$$ \left[ \frac{2}{3}, 1.2 \right] $$
+есть $2 - 1 = 1$ корень.
 
 \chapter{Листинг программы}
 
