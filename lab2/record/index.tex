@@ -10,9 +10,9 @@
 \pagenumbering{gobble}
 %\import{3_abstract/}{main.tex}
 
-%\pagestyle{empty}
-%\thispagestyle{empty}
-%\tableofcontents
+\pagestyle{empty}
+\thispagestyle{empty}
+\tableofcontents
 
 \clearpage
 \pagenumbering{arabic}
@@ -23,20 +23,20 @@
 
 \chapter{Исходная система}
 
-Рассматирваем систему вида $Ax = b$, где $A \left( n \times n \right) $ --- матрица системы, $b$ --- вектор правой части, $x$ --- вектор решения.
+Рассматирваем систему вида $Ax = b$, где $A \left( n \times n \right) $ --- матрица системы, $b$ ---
+вектор правой части, $x$ --- вектор решения.
 
-Матрица системы
+Для варианта 8 матрица системы имеет вид
 \begin{equation*}
 A =
 \begin{bmatrix}
     3.81 & 0.25 & 1.28 & 1.75 \\
     2.25 & 1.32 & 5.58 & 0.49 \\
     5.31 & 7.28 & 0.98 & 1.04 \\
-    10.39 & 2.45 & 3.35 & 2.28 \\
+    10.39 & 2.45 & 3.35 & 2.28, \\
 \end{bmatrix}
 \end{equation*}
-
-Вектор правой части
+а вектор правой части ---
 \begin{equation*}
 b =
 \begin{bmatrix}
@@ -51,13 +51,62 @@ b =
 
 \chapter{Результаты по шагам приведения к треугольной форме матрицы}
 
+Прямой ход --- приведение матрицы к треугольной форме.
+Он состоит в следующем:
+\begin{enumerate}
+  \item нахождение максимального по модулю элемента в матрице
+  $$a_{main} = \max_{i, j} \left| a_{ij} \right|, \,
+    i, j = 1 \dotsc n;$$
+  \item обнуление элементов матрицы в стоблце с максимальным элементом;
+  \item переход к пункту 1 с уменьшением размера матрицы
+  (выбрасыванимем стоблца и строки с главным элементом), пока не останется матрица $1 \times 1$.
+\end{enumerate}
+
+Результат приведения матрицы к диагональному виду по шагам
+(строки и столбцы с максимальными элементами не удалялись, так как были использованы в дальшейшем,
+но не учитывались в следующих итерациях)
+
+\lstset{inputencoding=utf8, extendedchars=\true}
+\lstinputlisting[language=bash,
+                 basicstyle=\ttfamily\scriptsize]{../code/get_diagonal}
+
 \chapter{Конечный результат (решение уравнения)}
+
+После того, как была получена треугольная матрица, был применен обратный метод Гаусса.
+Составлена система с треугольной матрицей и найдено решение с шестью значимыми цыфрами
+
+\lstset{inputencoding=utf8, extendedchars=\true}
+\lstinputlisting[language=bash,
+                 basicstyle=\ttfamily\scriptsize]{../code/solution}
 
 \chapter{Вектор невязки}
 
+Для проверки был найден вектор невязки по формуле $r = b - Ax$, где $A$ --- исходная матрица, $x$ ---
+наденное решение, $b$ --- столбец правой части
+
+\lstset{inputencoding=utf8, extendedchars=\true}
+\lstinputlisting[language=bash,
+                 basicstyle=\ttfamily\scriptsize]{../code/residuals}
+
 \chapter{Листинг программы}
+
+Листинг файла main.py
+\lstset{inputencoding=utf8, extendedchars=\true}
+\lstinputlisting[language=python,
+                 basicstyle=\ttfamily\scriptsize]{../code/main.py}
+
+Листинг файла solve.py
+\lstset{inputencoding=utf8, extendedchars=\true}
+\lstinputlisting[language=python,
+                basicstyle=\ttfamily\scriptsize]{../code/solve.py}
 
 \chapter*{Выводы}
 \addcontentsline{toc}{chapter}{Выводы}
+
+Система линейных алгебраических уравенений была решена с помощью метода Гаусса.
+Была использована схема с выбором главного элемента.
+
+Получен вектор невязки, который показывает погрешность найденного решения.
+Полученная погрешность не большая, поэтому решение было найдено достаточно точным.
 
 \end{document}
