@@ -1,0 +1,102 @@
+\input{../common/head_ru.tex}
+\input{config.tex}
+
+\begin{document}
+
+\import{1_title/}{title.tex}
+
+\clearpage
+
+\pagenumbering{gobble}
+%\import{3_abstract/}{main.tex}
+
+\pagestyle{empty}
+\thispagestyle{empty}
+\tableofcontents
+
+\clearpage
+\pagenumbering{arabic}
+\pagestyle{fancy}
+\setcounter{page}{2}
+
+\clearpage
+
+\chapter{Исходная система}
+
+Нужно найти собственные значения матрицы $A$ с помощью метода Данилевского.
+
+Для варианта 8 матрица имеет вид
+\begin{equation*}
+A =
+\begin{bmatrix}
+    5.26 & 0.10 & 0.55 & 1.28 \\
+    1.10 & 4.44 & 1.30 & 0.16 \\
+    0.55 & 1.30 & 6.44 & 2.10 \\
+    1.28 & 0.16 & 2.10 & 8.10 \\
+\end{bmatrix},
+\end{equation*}
+
+\chapter{Матрицы $M_i$ и $M_i^{-1}$}
+
+\lstset{inputencoding=utf8, extendedchars=\true}
+\lstinputlisting[language=bash,
+                 basicstyle=\ttfamily\scriptsize]{../code/matrices}
+
+\chapter{Результирующая матрица в форме Фробениуса}
+
+\lstset{inputencoding=utf8, extendedchars=\true}
+\lstinputlisting[language=bash,
+                 basicstyle=\ttfamily\scriptsize]{../code/frobenius}
+
+\chapter{Полученное характеристическое уравнение}
+
+Характеристический полином строется раскрытием характеристического определителя матрицы
+$P = M_1^{-1} M_2^{-1} M_3^{-1} AM_3 M_2 M_1$ по первой строке.
+Он, вследствие подобия матриц $A$ и $P$, является так же и характеристическим полиномом матрицы $A$.
+
+Раскрываем по первому столбцу
+$$p \left( \lambda \right) =
+  \left( -1 \right)^3 \cdot
+  \left(
+    \lambda^4 - 0.21375839 \lambda^3 + 0.56094356 \lambda^2 + 2.09537813 \lambda - 0.0001774
+  \right).$$
+
+\chapter{Собственные числа}
+
+Собственные числа были найдены из уравнения $P \left( \lambda \right) = 0$.
+Уравнение имеет два действительных корня:
+$ \lambda_1 = -1.07571, \, \lambda_2 = 0.0000846608$ и два комплексных корня:
+$ \lambda_3 = 0.644694 - 1.23786i, \, \lambda_4 = 0.644694 + 1.23786i$.
+
+\chapter{Листинг программы}
+
+Листинг файла \_\_main\_\_.py
+\lstset{inputencoding=utf8, extendedchars=\true}
+\lstinputlisting[language=python,
+                 basicstyle=\ttfamily\scriptsize]{../code/__main__.py}
+
+Листинг файла solve.py
+\lstset{inputencoding=utf8, extendedchars=\true}
+\lstinputlisting[language=python,
+                basicstyle=\ttfamily\scriptsize]{../code/solve.py}
+
+\chapter{Проверка полученных результатов в WolframAlpha}
+
+Была использована функция eigenvalues и получены такие результаты:
+$$ \lambda_1 = 10.1019, \,
+  \lambda_2 = 5.59192, \,
+  \lambda_3 = 4.97342, \,
+  \lambda_4 = 2.57273.$$
+
+\chapter*{Выводы}
+\addcontentsline{toc}{chapter}{Выводы}
+
+Собственные числа матрицы были найдены с помощью метода Данилевского.
+Для этого исходная матрица $A$ была преобразована так,
+что она имеет ненулевые элементы только в первой строке,
+и элементы на смещённой диагонали равны единице, то есть матрица приведена к форме Фробениуса.
+
+Найдены собственные числа матрицы с помощью WolframAlpha.
+Полученные решения не совпадают.
+
+\end{document}
