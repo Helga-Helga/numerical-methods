@@ -58,15 +58,24 @@ $P = M_1^{-1} M_2^{-1} M_3^{-1} AM_3 M_2 M_1$ по первой строке.
 $$p \left( \lambda \right) =
   \left( -1 \right)^3 \cdot
   \left(
-    \lambda^4 - 0.21375839 \lambda^3 + 0.56094356 \lambda^2 + 2.09537813 \lambda - 0.0001774
+    \lambda^4 - 24.24 \lambda^3 + 208.3799 \lambda^2 - 761.624474 \lambda + 1003.73945
   \right).$$
 
 \chapter{Собственные числа}
 
 Собственные числа были найдены из уравнения $P \left( \lambda \right) = 0$.
-Уравнение имеет два действительных корня:
-$ \lambda_1 = -1.07571, \, \lambda_2 = 0.0000846608$ и два комплексных корня:
-$ \lambda_3 = 0.644694 - 1.23786i, \, \lambda_4 = 0.644694 + 1.23786i$.
+Уравнение имеет 4 действительных корня (рис. \ref{fig:roots}):
+$$ \lambda_1 = 3.57273, \,
+  \lambda_2 = 4.97342, \,
+  \lambda_3 = 5.59192, \,
+  \lambda_4 = 10.1019.$$
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=.4\textwidth]{../code/roots.png}
+  \caption{График корней}
+  \label{fig:roots}
+\end{figure}
 
 \chapter{Листинг программы}
 
@@ -82,11 +91,18 @@ $ \lambda_3 = 0.644694 - 1.23786i, \, \lambda_4 = 0.644694 + 1.23786i$.
 
 \chapter{Проверка полученных результатов в WolframAlpha}
 
-Была использована функция eigenvalues и получены такие результаты:
+Была использована функция eigenvalues и получены такие результаты (рис. \ref{fig:wolfram}):
 $$ \lambda_1 = 10.1019, \,
   \lambda_2 = 5.59192, \,
   \lambda_3 = 4.97342, \,
   \lambda_4 = 2.57273.$$
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=.4\textwidth]{../code/wolframalpha_result.png}
+  \caption{Проверка полученных результатов в WolframAlpha}
+  \label{fig:wolfram}
+\end{figure}
 
 \chapter*{Выводы}
 \addcontentsline{toc}{chapter}{Выводы}
@@ -97,6 +113,6 @@ $$ \lambda_1 = 10.1019, \,
 и элементы на смещённой диагонали равны единице, то есть матрица приведена к форме Фробениуса.
 
 Найдены собственные числа матрицы с помощью WolframAlpha.
-Полученные решения не совпадают.
+Полученные решения полностью совпадают.
 
 \end{document}

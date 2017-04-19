@@ -15,7 +15,7 @@ def frobenius(matrix):
     m3[2,3] = matrix[3,3]
     print('M3^-1:')
     print(m3)
-    M3 = m3
+    M3 = m3.copy()
     M3[2,0] = -m3[2,0] / matrix[3,2]
     M3[2,1] = -m3[2,1] / matrix[3,2]
     M3[2,2] = 1 / matrix[3,2]
@@ -36,14 +36,14 @@ def frobenius(matrix):
     m2[1,3] = m3AM3[2,3]
     print('M2^-1:')
     print(m2)
-    M2 = m2
+    M2 = m2.copy()
     M2[1,0] = -m2[1,0] / m3AM3[2,1]
     M2[1,1] = 1 / m3AM3[2,1]
     M2[1,2] = -m2[1,2] / m3AM3[2,1]
     M2[1,3] = -m2[1,3] / m3AM3[2,1]
     print('M2:')
     print(M2)
-    m2m3AM3M2 = m2.dot(m3AM3.dot(M2))
+    m2m3AM3M2 = round(m2.dot(m3AM3.dot(M2)), 15)
     print('M2^-1 M3^-1 AM3M2:')
     print(m2m3AM3M2)
 
@@ -57,8 +57,8 @@ def frobenius(matrix):
     m1[0,3] = m2m3AM3M2[1,3]
     print('M1^-1:')
     print(m1)
-    M1 = m1
-    M1[0,0] = -1 / m2m3AM3M2[1,0]
+    M1 = m1.copy()
+    M1[0,0] = 1 / m2m3AM3M2[1,0]
     M1[0,1] = - m1[0,1] / m2m3AM3M2[1,0]
     M1[0,2] = - m1[0,2] / m2m3AM3M2[1,0]
     M1[0,3] = - m1[0,3] / m2m3AM3M2[1,0]
