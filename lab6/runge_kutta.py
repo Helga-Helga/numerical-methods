@@ -1,7 +1,7 @@
 from function import f
 
 def runge_kutta(h, left, right):
-  x, y = 0, 0
+  x, y = 0, 1
   result = []
   x_axis = []
   while right >= left:
